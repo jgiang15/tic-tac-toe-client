@@ -8,6 +8,15 @@ const signUp = function (data) {
   })
 }
 
+const signIn = function (data) {
+  return $.ajax({
+    method: 'POST',
+    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
+    data
+  })
+}
+
 module.exports = {
-  signUp
+  signUp,
+  signIn
 }

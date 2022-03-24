@@ -1,6 +1,6 @@
-const gameUi = ('./ui.js')
-const gameApi = ('./api.js')
-const getFormFields = ('../../lib/get-form-fields.js')
+const authUi = require('./ui.js')
+const authApi = require('./api.js')
+const getFormFields = require('../../lib/get-form-fields.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -11,11 +11,26 @@ const onSignUp = function (event) {
   const data = getFormFields(form)
   console.log(data)
 
-  gameApi.signUp(data)
-    .then(() => gameUi.onSignUpSuccess)
-    .catch(() => gameUi.onSingUpFailure)
+  authApi.signUp(data)
+    .then(() => authUi.onSignUpSuccess())
+    .catch(() => authUi.onSignUpFailure())
+}
+
+const onSignIn = function (event) {
+  event.preventDefault()
+  console.log('i am here')
+
+  // get the data from the form
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  authApi.signIn(data)
+    .then((response) => authUi.onSignInSuccess(response))
+    .catch(() => authUi.onSignInFailure())
 }
 
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn
 }
