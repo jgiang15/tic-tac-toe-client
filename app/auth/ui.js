@@ -1,5 +1,7 @@
 // const store = require('../store.js')
 
+const store = require('../store.js')
+
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p> Signed Up Successfully</p>')
   $('form').trigger('reset')
@@ -8,9 +10,10 @@ const onSignUpFailure = function () {
   $('#auth-display').html('<p>Sign Up Failed</p>')
 }
 
-const onSignInSuccess = function () {
+const onSignInSuccess = function (response) {
   $('#auth-display').html('<p> Signed In Successfully</p>')
   $('form').trigger('reset')
+  store.user = response.user
 }
 const onSignInFailure = function () {
   $('#auth-display').html('<p>Sign In Failed</p>')
