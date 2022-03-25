@@ -1,8 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 
-.box {
+* {
+    box-sizing: border-box;
+}
+
+.board {
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    border: 1px solid black;
-    display: flex;
-    height: 90px;
+
+}
+
+.cell {
+    border: 1px solid black
 }
