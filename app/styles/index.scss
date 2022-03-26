@@ -1,5 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
+$box-size: 200px;
+
 * {
     box-sizing: border-box;
 }
@@ -12,5 +14,6 @@
 }
 
 .cell {
-    border: 1px solid black
+    border: 1px solid black;
+    height: $box-size;
 }
