@@ -1,12 +1,19 @@
-// // const gameApi = require('./api.js')
-// // const gameUi = require('./ui.js')
+const gameApi = require('./api.js')
+const gameUi = require('./ui.js')
+// const getFormFields = require('../../lib/get-form-fields.js')
 
-// const gameBox = function () {
-//   $('.sect-1').on('click', function () {
-//     console.log('hello')
-//   })
-// }
+// const gameBoard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-// module.export = {
-//   gameBox
-// }
+const onNewGame = function (event) {
+  //   const form = event.target
+  //   const data = getFormFields(form)
+  //   console.log(data)
+
+  gameApi.newGame()
+    .then(() => gameUi.onNewGameSuccess())
+    .catch(() => gameUi.onNewGameFailure())
+}
+
+module.exports = {
+  onNewGame
+}
