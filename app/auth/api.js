@@ -1,32 +1,29 @@
 const store = require('../store.js')
-// const config = require('../config')
+const config = require('../config')
 
 const signUp = function (data) {
-  // console.log(config.apiUrl)
   return $.ajax({
     method: 'POST',
-    // url: config.apiUrl + '/sign-up',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
+    url: config.apiUrl + '/sign-up',
+    // url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
     data
   })
 }
 
 const signIn = function (data) {
-  // console.log(config.apiUrl)
   return $.ajax({
     method: 'POST',
-    // url: config.apiUrl + '/sign-in',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
+    url: config.apiUrl + '/sign-in',
+    // url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
     data
   })
 }
 
 const changePassword = function (data) {
-  // console.log(config.apiUrl)
   return $.ajax({
     method: 'PATCH',
-    // url: config.apiUrl + '/change-password',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/change-password',
+    url: config.apiUrl + '/change-password',
+    // url: 'https://tic-tac-toe-api-development.herokuapp.com/change-password',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -35,11 +32,10 @@ const changePassword = function (data) {
 }
 
 const signOut = function (data) {
-  // console.log(config.apiUrl)
   return $.ajax({
     method: 'Delete',
-    // url: config.apiUrl + '/sign-out',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
+    url: config.apiUrl + '/sign-out',
+    // url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }

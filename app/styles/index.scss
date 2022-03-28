@@ -16,6 +16,8 @@ $box-size: 200px;
 .cell {
     border: 1px solid black;
     height: $box-size;
+    justify-content: center;
+    align-items: center;
 }
 
 .cell:hover {
@@ -57,3 +59,16 @@ $box-size: 200px;
     border-right: 0;
     border-bottom: 0;
 }
+
+// .cell.x::before,
+// .cell.x::after {
+// content: '';
+// width: 100px;
+// height: 100px;
+// background-color: solid black;
+// }
+// .cell {
+//     height: $box-size * .15;
+//     width: 10px;
+//     background-color: red;
+// }
