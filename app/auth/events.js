@@ -1,6 +1,8 @@
 const authUi = require('./ui.js')
 const authApi = require('./api.js')
 const getFormFields = require('../../lib/get-form-fields.js')
+const gameApi = require('../game/api.js')
+const store = require('../store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -27,6 +29,8 @@ const onSignIn = function (event) {
 
   authApi.signIn(data)
     .then((response) => authUi.onSignInSuccess(response))
+    .then(() => gameApi.newGame())
+    .then((response) => { store.game = response.game })
     .catch(() => authUi.onSignInFailure())
 }
 

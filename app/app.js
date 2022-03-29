@@ -13,5 +13,5 @@ $(() => {
   $('#new-game-button').on('click', gameEvents.onNewGame)
   $('#new-game-button').hide()
   // $('#board').hide()
-  $('')
+  $('.cell').on('click', gameEvents.playerMove)
 })
