@@ -55,7 +55,52 @@ const playerMove = function (event) {
   } else {
     currentTurn = 'X'
   }
+
+  const b0 = gameArray[0]
+  const b1 = gameArray[1]
+  const b2 = gameArray[2]
+  const b3 = gameArray[3]
+  const b4 = gameArray[4]
+  const b5 = gameArray[5]
+  const b6 = gameArray[6]
+  const b7 = gameArray[7]
+  const b8 = gameArray[8]
+
+  if (b0 === 'X' && b1 === 'X' && b2 === 'X') {
+    console.log('Player X Wins')
+  } else if (b3 === 'X' && b4 === 'X' && b5 === 'X') {
+    console.log('Player X Wins')
+  } else if (b6 === 'X' && b7 === 'X' && b8 === 'X') {
+    console.log('Player X Wins')
+  } else if (b0 === 'X' && b4 === 'X' && b8 === 'X') {
+    console.log('Player X Wins')
+  } else if (b2 === 'X' && b4 === 'X' && b6 === 'X') {
+    console.log('Player X Wins')
+  } else if (b0 === 'X' && b3 === 'X' && b6 === 'X') {
+    console.log('Player X Wins')
+  } else if (b1 === 'X' && b4 === 'X' && b7 === 'X') {
+    console.log('Player X Wins')
+  } else if (b2 === 'X' && b5 === 'X' && b8 === 'X') {
+    console.log('Player X Wins')
+  } else if (b0 === 'O' && b1 === 'O' && b2 === 'O') {
+    console.log('Player O Wins')
+  } else if (b3 === 'O' && b4 === 'O' && b5 === 'O') {
+    console.log('Player O Wins')
+  } else if (b6 === 'O' && b7 === 'O' && b8 === 'O') {
+    console.log('Player O Wins')
+  } else if (b0 === '0' && b4 === 'O' && b8 === 'O') {
+    console.log('Player O Wins')
+  } else if (b2 === 'O' && b4 === 'O' && b6 === 'O') {
+    console.log('Player O Wins')
+  } else if (b0 === 'O' && b3 === 'O' && b6 === 'O') {
+    console.log('Player O Wins')
+  } else if (b1 === 'O' && b4 === 'O' && b7 === 'O') {
+    console.log('Player O Wins')
+  } else if (b2 === 'O' && b5 === 'O' && b8 === 'O') {
+    console.log('Player O Wins')
+  } else {}
 }
+
 module.exports = {
   onNewGame,
   playerMove
