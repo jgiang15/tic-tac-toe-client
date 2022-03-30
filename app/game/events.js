@@ -67,37 +67,53 @@ const playerMove = function (event) {
   const b8 = gameArray[8]
 
   if (b0 === 'X' && b1 === 'X' && b2 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b3 === 'X' && b4 === 'X' && b5 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b6 === 'X' && b7 === 'X' && b8 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b0 === 'X' && b4 === 'X' && b8 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b2 === 'X' && b4 === 'X' && b6 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b0 === 'X' && b3 === 'X' && b6 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b1 === 'X' && b4 === 'X' && b7 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b2 === 'X' && b5 === 'X' && b8 === 'X') {
-    console.log('Player X Wins')
+    // console.log('Player X Wins')
+    $('#win-game').html('<p>Player X Wins!</p>')
   } else if (b0 === 'O' && b1 === 'O' && b2 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b3 === 'O' && b4 === 'O' && b5 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b6 === 'O' && b7 === 'O' && b8 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b0 === '0' && b4 === 'O' && b8 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b2 === 'O' && b4 === 'O' && b6 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b0 === 'O' && b3 === 'O' && b6 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b1 === 'O' && b4 === 'O' && b7 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else if (b2 === 'O' && b5 === 'O' && b8 === 'O') {
-    console.log('Player O Wins')
+    // console.log('Player O Wins')
+    $('#win-game').html('<p>Player O Wins!</p>')
   } else {}
 }
 

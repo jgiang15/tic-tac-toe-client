@@ -15,6 +15,8 @@ const onSignInSuccess = function (response) {
   $('form').trigger('reset')
   store.user = response.user
   $('#new-game-button').show()
+  $('#change-password-form').show()
+  $('#sign-out-button').show()
 }
 const onSignInFailure = function () {
   $('#auth-display').html('<p>Sign In Failed</p>')
