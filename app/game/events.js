@@ -20,7 +20,7 @@ let currentTurn = 'X'
 // const over = false
 
 const playerMove = function (event) {
-  const cellIndex = event.target.getAttribute('[data-cell-index]')
+  const cellIndex = event.target.getAttribute('data-cell-index')
 
   // cellIndex.forEach(cell => {
   //   cell.addEventListener('click', onClick, { once: true })
@@ -36,23 +36,25 @@ const playerMove = function (event) {
     $(event.target).html(currentTurn)
     // store.game.cell.value = currentTurn
     gameArray[cellIndex] = currentTurn
-    store.game.cells.values = cellIndex
+    // store.game.cells.values = cellIndex
     // store.game.cell.index = cellIndex
     // gameValue.game.cells.value = currentTurn
-  } if (currentTurn === 'X') {
+  }
+  console.log(gameArray)
+  console.log(cellIndex)
+
+  gameApi
+    .updateGame(cellIndex, currentTurn, false)
+    .then((response) => gameUi.onUpdateSuccess(response))
+    //   function placeMark (cell, currentTurn) {
+    //     cell.classList.add(currentTurn)
+    //   }
+
+  if (currentTurn === 'X') {
     currentTurn = 'O'
   } else {
     currentTurn = 'X'
   }
-
-  console.log(gameArray)
-  console.log(cellIndex)
-
-  gameApi.updateGame(cellIndex, currentTurn, false)
-    .then((response) => gameUi.onUpdateGameSuccess(response))
-//   function placeMark (cell, currentTurn) {
-//     cell.classList.add(currentTurn)
-//   }
 }
 module.exports = {
   onNewGame,
