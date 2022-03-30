@@ -9,3 +9,5 @@ As a user, I want to be able to reset the game
 As a user, I want to be have an easily navigable application
 
 WIREFRAME image: https://imgur.com/ezmak8P 
+
+Deploy link: https://jgiang15.github.io/tic-tac-toe-client/
