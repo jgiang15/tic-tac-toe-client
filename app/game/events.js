@@ -8,8 +8,14 @@ const onNewGame = function (event) {
   //   const data = getFormFields(form)
   //   console.log(data)
 
+  $('.cell').on('click', playerMove)
+  $('.cell').html('')
+  $('#game-display').html(' ')
+
+  currentTurn = 'X'
+
   gameApi.newGame()
-    .then(() => gameUi.onNewGameSuccess())
+    .then((response) => gameUi.onNewGameSuccess(response))
     .catch(() => gameUi.onNewGameFailure())
 }
 
@@ -68,55 +74,78 @@ const playerMove = function (event) {
 
   if (b0 === 'X' && b1 === 'X' && b2 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b3 === 'X' && b4 === 'X' && b5 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b6 === 'X' && b7 === 'X' && b8 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b0 === 'X' && b4 === 'X' && b8 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b2 === 'X' && b4 === 'X' && b6 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b0 === 'X' && b3 === 'X' && b6 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b1 === 'X' && b4 === 'X' && b7 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b2 === 'X' && b5 === 'X' && b8 === 'X') {
     // console.log('Player X Wins')
-    $('#win-game').html('<p>Player X Wins!</p>')
+    $('#game-display').html('<p>Player X Wins!</p>')
+    $('.cell').off()
   } else if (b0 === 'O' && b1 === 'O' && b2 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b3 === 'O' && b4 === 'O' && b5 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b6 === 'O' && b7 === 'O' && b8 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b0 === '0' && b4 === 'O' && b8 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b2 === 'O' && b4 === 'O' && b6 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b0 === 'O' && b3 === 'O' && b6 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b1 === 'O' && b4 === 'O' && b7 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
   } else if (b2 === 'O' && b5 === 'O' && b8 === 'O') {
     // console.log('Player O Wins')
-    $('#win-game').html('<p>Player O Wins!</p>')
+    $('#game-display').html('<p>Player O Wins!</p>')
+    $('.cell').off()
+  } else if (!store.game.cells.includes('')) {
+    $('#game-display').html('<p>Its a TIE!</p>')
   } else {}
-}
 
+  // for (let i = 0; i < gameArray.length; i++) {
+  //   if (gameArray.includes('X' || 'O')) {
+  //     $('#game-display').html('<p>Its a Tie</p>')
+  //   } else {}
+  // }
+}
 module.exports = {
   onNewGame,
   playerMove

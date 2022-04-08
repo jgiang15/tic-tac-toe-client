@@ -15,5 +15,5 @@ $(() => {
   $('#board').hide()
   $('#change-password-form').hide()
   $('#sign-out-button').hide()
-  $('.cell').on('click', gameEvents.playerMove)
+  // $('.cell').on('click', gameEvents.playerMove)
 })

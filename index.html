@@ -14,30 +14,38 @@
     <body>
       <header>
         <h1>Tic Tac Toe Game</h1>
+        <div>
         <form id="sign-in-form">
           <input name="credentials[email]" type="text" placeholder="Email">
           <input name="credentials[password]" type="password" placeholder="Password">
           <button type="submit">Sign In</button>
         </form>
 
-      </header>
-         <form id="sign-up-form">
-        <input name="credentials[email]" type="text" placeholder="Email">
-        <input name="credentials[password]" type="password" placeholder="Password">
-        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-        <button type="submit">Sign Up</button>
+        <form id="sign-up-form">
+          <input name="credentials[email]" type="text" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+          <button type="submit">Sign Up</button>
         </form>
-        
+
         <form id="change-password-form">
           <input name="passwords[old]" type="password" placeholder="Enter old password">
           <input name="passwords[new]" type="password" placeholder="Enter new password">
           <button type="submit">Change Password</button>
         </form>
+      </div>
 
       <button id="sign-out-button">Sign Out</button>
 
+      </header>
+
+        <button id="new-game-button">New Game</button>
+
        <section id="auth-display"></section>
 
+        <section id="win-game"></section>
+        <section id="game-display"></section>
+      
        <div class="container" id="board">
          <div class="row">
            <div class="col-4 box cell" data-cell-index=0 id="b1"></div>
@@ -52,9 +60,5 @@
           </div>
        </div>
 
-       <button id="new-game-button">New Game</button>
-
-       <section id="win-game"></section>
-       <section id="game-display"></section>
     </body>
 </html>

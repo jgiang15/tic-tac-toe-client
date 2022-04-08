@@ -33,7 +33,7 @@ const changePassword = function (data) {
 
 const signOut = function (data) {
   return $.ajax({
-    method: 'Delete',
+    method: 'DELETE',
     url: config.apiUrl + '/sign-out',
     // url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
     headers: {

@@ -8,6 +8,10 @@ $box-size: 200px;
 
 body {
     background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 
@@ -16,6 +20,11 @@ body {
     align-content: center;
     align-items: center;
 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .cell {
@@ -64,6 +73,11 @@ body {
     border-right: 0;
     border-bottom: 0;
 }
+
+#new-game-button {
+    margin: 20px 30%;
+}
+
 
 // .cell.x::before,
 // .cell.x::after {
